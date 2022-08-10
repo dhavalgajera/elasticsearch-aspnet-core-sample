@@ -16,7 +16,7 @@ namespace ElasticsearchNETCoreSample.Controllers
         private readonly IElasticClient _elasticClient;
         private readonly ILogger<HomeController> _logger; 
 
-        public HomeController(
+        public HomeController(  
             IElasticClient elasticClient,
             ILogger<HomeController> logger)
         {
@@ -100,7 +100,7 @@ namespace ElasticsearchNETCoreSample.Controllers
             foreach (var book in books)
             {
                 var existsResponse = await _elasticClient.DocumentExistsAsync<Book>(book);
-
+                
                 // If the document already exists, we're going to update it; otherwise insert it
                 // Note:  You may get existsResponse.IsValid = false for a number of issues
                 // ranging from an actual server issue, to mismatches with indices (e.g. a

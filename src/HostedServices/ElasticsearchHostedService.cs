@@ -22,7 +22,7 @@ namespace ElasticsearchNETCoreSample.HostedServices
         {
             // We're creating a single index below, but you could do other initialization
             // tasks for Elasticsearch here.
-            var booksIndexName = "books";
+            var booksIndexName = "qna-01";
 
             // The check for whether this index exists and subsequently deleting
             // it if it does is for demo purposes!  This is so we can make changes
